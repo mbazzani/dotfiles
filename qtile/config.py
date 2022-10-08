@@ -135,8 +135,8 @@ layouts = [
 
 widget_defaults = dict(
     font="fontawesome",
-    fontsize=12,
-    padding=3,
+    fontsize= 13,
+    padding=4,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -147,7 +147,7 @@ screens = [
                 # widget.CurrentLayout(),
                 widget.Sep(
                     linewidth=0,
-                    padding=6,
+                    padding=8,
                     # foreground - colors[2],
                     # backgroud = colors [0]
                 ),
@@ -161,14 +161,29 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),
+                # Triangle shape
+                widget.TextBox(text='\u25e2', fontsize=50),
+                widget.BackLight(),
                 widget.Net(interface="wlp4s0"),
                 widget.Clock(format=" %a %Y-%m-%d  |   %I:%M %p"),
-                # widget.QuickExit(),
+                widget.QuickExit(label=""),
+                widget.Sep(
+                    linewidth=0,
+                    padding=8,
+                    # foreground - colors[2],
+                    # backgroud = colors [0]
+                ),
             ],
+
+            #Bar height
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
+
+        #Set wallpaper
+        # wallpaper='/usr/share/backgrounds/gnome/adwaita-d.jpg',
+        # wallpaper_mode='fill'
     ),
 ]
 
