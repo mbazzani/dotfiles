@@ -134,7 +134,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="fontawesome",
     fontsize=12,
     padding=3,
 )
@@ -162,8 +162,8 @@ screens = [
                 ),
                 widget.Systray(),
                 widget.Net(interface="wlp4s0"),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
+                widget.Clock(format=" %a %Y-%m-%d  |   %I:%M %p"),
+                # widget.QuickExit(),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
