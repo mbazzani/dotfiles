@@ -86,7 +86,7 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "e", lazy.spawn("emacsclient -c"), desc="Launch rofi"),
     Key([mod], "f", lazy.spawn("firefox"), desc="Launch rofi"),
-    Key([mod], "b", lazy.spawn("brave"), desc="Launch rofi"),
+    Key([mod], "s", lazy.spawn("flatpak run com.brave.Browser"), desc="Launch rofi"),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -163,7 +163,6 @@ screens = [
                 widget.Systray(),
                 # Triangle shape
                 widget.TextBox(text='\u25e2', fontsize=50),
-                widget.BackLight(),
                 widget.Net(interface="wlp4s0"),
                 widget.Clock(format=" %a %Y-%m-%d  |   %I:%M %p"),
                 widget.QuickExit(label=""),
@@ -182,8 +181,8 @@ screens = [
         ),
 
         #Set wallpaper
-        # wallpaper='/usr/share/backgrounds/gnome/adwaita-d.jpg',
-        # wallpaper_mode='fill'
+        wallpaper='/usr/share/backgrounds/gnome/adwaita-d.jpg',
+        wallpaper_mode='fill'
     ),
 ]
 

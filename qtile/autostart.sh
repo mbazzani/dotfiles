@@ -8,3 +8,4 @@ xrandr --output HDMI-1-2 --mode 2560x1440 &
 emacs --daemon &
 picom &
 lxpolkit &
+syncthing serve& 
