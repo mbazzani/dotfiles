@@ -1,0 +1,4 @@
+#!/bin/bash
+printf "Please enter csv file name:\n"
+read filename
+column -s, -t <$filename | less -#2 -N -S
