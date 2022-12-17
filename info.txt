@@ -1,0 +1,33 @@
+Packages:
+qtile 
+foot 
+wayland
+brave-bin 
+librewolf-bin 
+freetube-bin 
+gradience
+adw-gtk3
+nvim
+git
+anaconda
+sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+spaceship prompt (clone repo and source in zshrc)
+
+Qtile wayland dependencies:
+wlroots 
+pywlroots 
+python-xkbcommon 
+python-pywayland 
+python-cffi 
+cairo 
+python-cairo 
+python-cairo-cffi 
+pango 
+python-dbus-next
+
+Fonts:
+otf-charter 
+otf-xcharter 
+font-manager 
+sf-mono-nerd-font-icons 
+fira sans
