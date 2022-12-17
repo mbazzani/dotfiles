@@ -5,6 +5,8 @@ wayland
 brave-bin 
 librewolf-bin 
 freetube-bin 
+gradience
+adw-gtk3
 nvim
 git
 
