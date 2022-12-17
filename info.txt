@@ -1,6 +1,28 @@
 Packages:
-csutil pip for qtile
-qtile foot, wayland
-brave-bin, librewolf-bin, freetube-bin, nvim
+qtile 
+foot 
+wayland
+brave-bin 
+librewolf-bin 
+freetube-bin 
+nvim
+git
+
+Qtile wayland dependencies:
+wlroots 
+pywlroots 
+python-xkbcommon 
+python-pywayland 
+python-cffi 
+cairo 
+python-cairo 
+python-cairo-cffi 
+pango 
+python-dbus-next
+
 Fonts:
-otf-charter, otf-xcharter, font-manager, sf-mono-nerd-font-icons, fira sans
+otf-charter 
+otf-xcharter 
+font-manager 
+sf-mono-nerd-font-icons 
+fira sans
