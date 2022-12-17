@@ -7,11 +7,14 @@ librewolf-bin
 freetube-bin 
 gradience
 adw-gtk3 -> set with gnome tweaks as legacy application theme. Then, gradience theming will work
+firefox-gnome-theme 
+https://github.com/rafaelmardojai/firefox-gnome-theme 
 nvim
 git
 anaconda
 sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 spaceship prompt (clone repo and source in zshrc)
+
 
 Qtile wayland dependencies:
 wlroots 
