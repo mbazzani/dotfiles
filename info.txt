@@ -10,6 +10,7 @@ adw-gtk3
 nvim
 git
 anaconda
+sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 
 Qtile wayland dependencies:
 wlroots 
