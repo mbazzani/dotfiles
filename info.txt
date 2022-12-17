@@ -9,6 +9,7 @@ gradience
 adw-gtk3
 nvim
 git
+anaconda
 
 Qtile wayland dependencies:
 wlroots 
