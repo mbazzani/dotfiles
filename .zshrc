@@ -13,3 +13,5 @@ compinit
 # End of lines added by compinstall
 
 source "$HOME/.zsh/spaceship/spaceship.zsh"
+
+export PATH=/Users/mb/anaconda3/bin:$PATH
