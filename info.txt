@@ -11,6 +11,7 @@ nvim
 git
 anaconda
 sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+spaceship prompt (clone repo and source in zshrc)
 
 Qtile wayland dependencies:
 wlroots 
