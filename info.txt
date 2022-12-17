@@ -1,0 +1,6 @@
+Packages:
+csutil pip for qtile
+qtile foot, wayland
+brave-bin, librewolf-bin, freetube-bin, nvim
+Fonts:
+otf-charter, otf-xcharter, font-manager, sf-mono-nerd-font-icons, fira sans
