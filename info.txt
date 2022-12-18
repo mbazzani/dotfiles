@@ -34,3 +34,5 @@ otf-xcharter
 font-manager 
 sf-mono-nerd-font-icons 
 fira sans
+manual font directory
+export FONTCONFIG_PATH=/etc/fonts
