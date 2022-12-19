@@ -11,6 +11,7 @@ firefox-gnome-theme
 https://github.com/rafaelmardojai/firefox-gnome-theme 
 nvim
  - ripgrep, fd, libstdc++
+export OPENAI_API_KEY="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"
 git
 anaconda
 sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
