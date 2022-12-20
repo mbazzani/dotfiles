@@ -1,8 +1,7 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-unsetopt beep
+HISTFILE=~/.zsh_history
+HISTSIZE=500
+SAVEHIST=2000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -12,6 +11,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-source "$HOME/.zsh/spaceship/spaceship.zsh"
+eval "$(starship init zsh)"
 
-export PATH=/Users/mb/anaconda3/bin:$PATH
+export OPENAI_API_KEY="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"
