@@ -36,7 +36,7 @@ import os
 import subprocess
 
 mod = "mod4"
-terminal = "kitty"
+terminal = "alacritty"
 
 keys = [
 
