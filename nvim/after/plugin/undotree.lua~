@@ -1,1 +1,0 @@
-vim.api.nvim_set_keymap("n","<leader>u",vim.cmd.UndoTreeToggle<CR>, {noremap = true})

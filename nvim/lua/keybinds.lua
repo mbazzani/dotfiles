@@ -1,15 +1,15 @@
 --Leader key is space
 vim.g.mapleader = " "
---While in normal, SPC . enters filetree
+--Double leader enters command mode
+vim.keymap.set("n","<leader><leader>",":")
 vim.keymap.set("n","<leader>.",vim.cmd.Ex)
---Tab switching
-vim.keymap.set("n","<leader>1", "1gt")
-vim.keymap.set("n","<leader>2", "2gt")
-vim.keymap.set("n","<leader>3", "3gt")
-vim.keymap.set("n","<leader>4", "4gt")
-vim.keymap.set("n","<leader>5", "5gt")
-vim.keymap.set("n","<leader>6", "6gt")
-vim.keymap.set("n","<leader>7", "7gt")
-vim.keymap.set("n","<leader>8", "8gt")
-vim.keymap.set("n","<leader>9", "9gt")
-vim.keymap.set("n","<leader>0", "0gt")
+--File actions
+vim.keymap.set("n","<leader>q",vim.cmd.q)
+vim.keymap.set("n","<leader>w",vim.cmd.w)
+--Window motions
+vim.keymap.set("n","<leader>ww", "<C-w>w")
+vim.keymap.set("n","<leader>wh", "<C-w>h")
+vim.keymap.set("n","<leader>wj", "<C-w>j")
+vim.keymap.set("n","<leader>wk", "<C-w>k")
+vim.keymap.set("n","<leader>wl", "<C-w>l")
+
