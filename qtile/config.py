@@ -36,7 +36,9 @@ import os
 import subprocess
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "gnome-terminal"
+border_focus = "#c0bfbc"
+border_normal = "#241f31"
 
 keys = [
 
@@ -114,12 +116,10 @@ for i in groups:
             #     desc="move focused window to group {}".format(i.name)),
         ]
     )
-
+#d75f5f
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"],
-                   border_width=2,
-                   margin=5),
-    layout.Max(border_width=0),
+        layout.Columns(border_width=2, margin=5, border_focus=border_focus, border_normal = border_normal),
+        layout.Max(border_width=0),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -134,8 +134,8 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="fontawesome",
-    fontsize= 13,
+    #font="fontawesome",
+    fontsize= 14,
     padding=4,
 )
 extension_defaults = widget_defaults.copy()
@@ -180,9 +180,6 @@ screens = [
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
 
-        #Set wallpaper
-        wallpaper='/usr/share/backgrounds/gnome/adwaita-d.jpg',
-        wallpaper_mode='fill'
     ),
 ]
 
