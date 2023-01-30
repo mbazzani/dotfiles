@@ -38,3 +38,4 @@ sf-mono-nerd-font-icons
 fira sans
 manual font directory
 export FONTCONFIG_PATH=/etc/fonts
+Install texlive full for doom emacs org export
