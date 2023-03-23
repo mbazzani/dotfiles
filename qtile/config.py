@@ -37,7 +37,7 @@ import subprocess
 
 mod = "mod4"
 terminal = "gnome-terminal"
-border_focus = "#c0bfbc"
+border_focus = "#9a9996"
 border_normal = "#241f31"
 
 keys = [
@@ -134,7 +134,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    #font="fontawesome",
+    font="sfmono",
     fontsize= 14,
     padding=4,
 )
@@ -153,7 +153,7 @@ screens = [
                 ),
                 widget.GroupBox(highlight_method= "block", rounded = False),
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.Spacer(bar.STRETCH),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
@@ -163,12 +163,13 @@ screens = [
                 widget.Systray(),
                 # Triangle shape
                 widget.TextBox(text='\u25e2', fontsize=50),
-                widget.Net(interface="wlp4s0"),
-                widget.Clock(format=" %a %Y-%m-%d  |   %I:%M %p"),
-                widget.QuickExit(label=""),
+                widget.Net(interface="wlp4s0",format='Net: {total} |'),
+                widget.Clock(format="  %a %Y-%m-%d |   %I:%M %p |"),
+                #widget.QuickExit(label=" "),
+                widget.QuickExit(default_text='', countdown_format='{}'),
                 widget.Sep(
                     linewidth=0,
-                    padding=8,
+                    padding=14,
                     # foreground - colors[2],
                     # backgroud = colors [0]
                 ),
