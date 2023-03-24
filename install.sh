@@ -24,6 +24,7 @@ cd dotfiles
 
 cp qtile/* .config/qtile
 
+cd
 mkdir .config/picom
 cp picom/picom.conf ~/.config/picom/picom.conf
 
@@ -32,4 +33,10 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install
 cp ~/dotfiles/doom/* ~/.config/doom/
 
+cd
+git clone https://github.com/rafaelmardojai/firefox-gnome-theme
+cd firefox-gnome-theme
+./scripts/auto-install.sh
 
+cd ~/.dotfiles
+sudo cp *.sh /usr/bin/

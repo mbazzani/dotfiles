@@ -36,9 +36,7 @@ import os
 import subprocess
 
 mod = "mod4"
-terminal = "alacritty"
-border_focus = "#9a9996"
-border_normal = "#241f31"
+terminal = "kitty"
 
 keys = [
 
@@ -84,15 +82,12 @@ keys = [
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
 
     # Launch applications
-    Key([mod], "r", lazy.spawn("dmenu_run"), desc="Launch dmenu"),
+    Key([mod], "r", lazy.spawn("rofi -i -show drun -modi drun -show-icons"), desc="Launch rofi"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "e", lazy.spawn("emacsclient -c"), desc="Launch rofi"),
-    Key([mod], "f", lazy.spawn("firefox"), desc="Launch rofi"),
-    Key([mod], "s", lazy.spawn("flatpak run com.brave.Browser"), desc="Launch rofi"),
 ]
 
 groups = [Group(i) for i in "123456789"]
-
 
 for i in groups:
     keys.extend(
@@ -117,10 +112,12 @@ for i in groups:
             #     desc="move focused window to group {}".format(i.name)),
         ]
     )
-#d75f5f
+
 layouts = [
-        layout.Columns(border_width=2, margin=5, border_focus=border_focus, border_normal = border_normal),
-        layout.Max(border_width=0),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"],
+                   border_width=2,
+                   margin=5),
+    layout.Max(border_width=0),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -135,52 +132,36 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sfmono",
-    fontsize= 14,
-    padding=4,
-    #background='#282c34'
+    font="sans",
+    fontsize=12,
+    padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar(
+        bottom=bar.Bar(
             [
-                # widget.CurrentLayout(),
-                widget.Sep(
-                    linewidth=0,
-                    padding=8,
-                ),
-                widget.GroupBox(highlight_method= "block", rounded = False),
+                widget.CurrentLayout(),
+                widget.GroupBox(),
                 widget.Prompt(),
-                widget.Spacer(bar.STRETCH),
+                widget.WindowName(),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.TextBox("default config", name="default"),
+                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 widget.Systray(),
-                # Triangle shape
-                widget.TextBox(text='\u25e2', fontsize=40),
-                widget.Net(interface="wlan0",format='Net: {total} |'),
-                widget.Clock(format="  %a %Y-%m-%d |   %I:%M %p |"),
-                #widget.QuickExit(label=" "),
-                widget.QuickExit(default_text='', countdown_format='{}'),
-                widget.Sep(
-                    linewidth=0,
-                    padding=14,
-                    # foreground - colors[2],
-                    # backgroud = colors [0]
-                ),
+                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                widget.QuickExit(),
             ],
-
-            #Bar height
-            23,
+            24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
-
     ),
 ]
 

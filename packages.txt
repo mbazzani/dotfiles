@@ -33,3 +33,15 @@ jdk17-openjdk
 zsh
 starship
 github-cli
+python-lsp-server
+dtos-backgrounds
+picom
+xorg-xrandr
+nitrogen
+natural-wallpaper-collection-git
+steam
+otf-sfmono-patched
+networkmanager
+gdm
+gnome-shell
+gnome-control-center
