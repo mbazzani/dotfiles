@@ -14,6 +14,9 @@ chsh mb
 
 #Authenticate git
 gh auth login
+gh auth setup-git
+git config --global user.email "mbazzani@ucsd.edu"
+git config --global user.name "Marco Bazzani"
 
 # Set up dotfiles
 git clone https://github.com/mbazzani/dotfiles
