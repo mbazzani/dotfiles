@@ -14,6 +14,7 @@ compinit
 
 export OPENAI_API_KEY="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"
 export KEYTIMEOUT=1
+export PATH="/home/mb/.local/bin/:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
