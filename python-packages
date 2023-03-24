@@ -1,0 +1,6 @@
+nose
+pipenv
+black
+pyflakes
+isort
+mypy
