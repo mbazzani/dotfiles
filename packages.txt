@@ -45,3 +45,15 @@ networkmanager
 gdm
 gnome-shell
 gnome-control-center
+thunderbird
+xclip
+xdotool
+xorg-xprop
+xorg-xwininfo
+signal-desktop
+pfetch
+flameshot
+miniconda3
+ghc-static
+jupyterlab
+jupyter-notebook
