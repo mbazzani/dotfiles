@@ -11,32 +11,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
-export OPENAI_API_KEY="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"
-export KEYTIMEOUT=1
 export PATH="/home/mb/.local/bin/:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mb/.mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mb/.mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/mb/.mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/mb/.mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "/home/mb/.mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/home/mb/.mambaforge/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 #Starship prompt
 SPACESHIP_PYENV_SHOW=false
 eval "$(starship init zsh)"
 
+pfetch
