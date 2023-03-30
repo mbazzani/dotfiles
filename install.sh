@@ -7,7 +7,7 @@ cd yay-bin
 makepkg -si
 
 # Install packages
-yay -S --needed < packages.txt
+yay -S --needed <packages.txt
 
 #Change shell to zsh
 chsh mb
@@ -37,6 +37,10 @@ cd
 git clone https://github.com/rafaelmardojai/firefox-gnome-theme
 cd firefox-gnome-theme
 ./scripts/auto-install.sh
+cd
+rm -rf firefox-gnome-theme
 
 cd ~/.dotfiles
 sudo cp *.sh /usr/bin/
+
+conda config --set changeps1 False
