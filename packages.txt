@@ -57,3 +57,7 @@ miniconda3
 ghc-static
 jupyterlab
 jupyter-notebook
+slack-desktop
+gnome-tweaks
+otf-bitstream-charter
+nerd-fonts-sf-mono-ligatures
