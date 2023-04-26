@@ -16,7 +16,6 @@ export PATH="/home/mb/.local/bin/:$PATH"
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 #Starship prompt
-SPACESHIP_PYENV_SHOW=false
 eval "$(starship init zsh)"
 
 pfetch
