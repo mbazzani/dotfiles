@@ -1,0 +1,2 @@
+Switch to rofi over dmenu
+Switch to XMonad?
