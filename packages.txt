@@ -73,3 +73,6 @@ qbittorrent
 flatpak
 ranger
 ghcup-hs-bin
+rofi
+rofi-themes-collection.git
+neovide
