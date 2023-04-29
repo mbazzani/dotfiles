@@ -12,10 +12,11 @@ compinit
 # End of lines added by compinstall
 
 export PATH="/home/mb/.local/bin/:$PATH"
+alias ls='colorls'
 
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 #Starship prompt
 eval "$(starship init zsh)"
 
-pfetch
+neofetch
