@@ -5,4 +5,5 @@ lsp.ensure_installed({
 	'clangd',
 	'pyright'
 })
+vim.keymap.set("n","<leader>u", vim.cmd.UndotreeToggle)
 lsp.setup()

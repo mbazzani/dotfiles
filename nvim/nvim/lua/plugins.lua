@@ -3,7 +3,12 @@ local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({'git',
+		       'clone',
+			   '--depth',
+			   '1',
+			   'https://github.com/wbthomason/packer.nvim',
+			   install_path})
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -33,20 +38,6 @@ return require('packer').startup(function(use)
 
     use 'navarasu/onedark.nvim'
 
---	use {
---		"jackMort/ChatGPT.nvim",
---		config = function()
---			require("chatgpt").setup({
---				-- optional configuration
---			})
---		end,
---		requires = {
---			"MunifTanjim/nui.nvim",
---			"nvim-lua/plenary.nvim",
---			"nvim-telescope/telescope.nvim"
---		}
---	}
-
 	use 'mbbill/undotree'
 
 	use 'nvim-lualine/lualine.nvim'
@@ -73,27 +64,34 @@ return require('packer').startup(function(use)
 		}
 	}
 
+
+	use 'ggandor/leap.nvim'
+
+	-- Remove the `use` here if you're using folke/lazy.nvim.
     use {
       'Exafunction/codeium.vim',
       config = function ()
         -- Change '<C-g>' here to any keycode you like.
-        vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-        vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-        vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-        vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+        vim.keymap.set('i', '<Alt-Enter>', function ()
+				return vim.fn['codeium#Accept']() end, { expr = true })
+        vim.keymap.set('i', '<Alt-Tab>', function()
+				return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+        vim.keymap.set('i', '<c-,>', function()
+				return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+        vim.keymap.set('i', '<c-x>', function()
+				return vim.fn['codeium#Clear']() end, { expr = true })
       end
     }
 
-	use 'ggandor/leap.nvim'
+	use 'lervag/vimtex'
 
-	use 'Exafunction/codeium.vim'
+	use 'TimUntersberger/neogit'
 
-	use({
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		config = function()
-			require("lsp_lines").setup()
-		end,
-	})
+	use 'luochen1990/rainbow'
+
+	use 'Olical/conjure'
+
+	use 'danymat/neogen'
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
