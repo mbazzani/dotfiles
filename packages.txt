@@ -1,14 +1,10 @@
 qtile
 qtile-extras
 gdm
-emacs
 neovim
 vim
 pfetch
-neofetch
-dmenu-distrotube
-dtos-alacritty
-cmake
+neofetch cmake
 find
 fd
 ripgrep
@@ -75,4 +71,15 @@ ranger
 ghcup-hs-bin
 rofi
 rofi-themes-collection.git
-neovide
+kitty
+xdg-desktop-portal-hyprland-git
+hyprland-bin 
+hyprland-nvidia
+polkit-gnome ffmpeg neovim viewnior       
+kitty
+waybar-hyprland
+lxappearance
+wpaperd
+gallery-dl
+libmad
+libid3tag
